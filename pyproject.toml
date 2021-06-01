@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "jobeff"
+version = "0.1.0"
+description = "Slurm job efficency and accounting"
+authors = ["Dietrich Liko <Dietrich.Liko@oeaw.ac.at>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+matplotlib = "^3.4.2"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.5b1"
+mypy = "^0.812"
+flake8 = "^3.9.2"
+isort = "^5.8.0"
+flake8-isort = "^4.0.0"
+flake8-black = "^0.2.1"
+flake8-bugbear = "^21.4.3"
+flake8-mypy = "^17.8.0"
+
+[tool.poetry.scripts]
+jobeff = "jobeff.jobeff:main"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
